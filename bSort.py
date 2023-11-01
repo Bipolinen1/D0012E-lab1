@@ -35,9 +35,9 @@ def bSort(ls):
     return ls
 
 
-list = random.sample(range(-1000000, 1000000), 100000)
+"""list = random.sample(range(-1000000, 1000000), 100000)
 
 startTime = time.time()
 print(bSort(list))
 endTime = time.time()
-print(endTime-startTime)
+print(endTime-startTime)"""

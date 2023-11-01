@@ -12,5 +12,5 @@ def insertionSort(ls):
     return ls
 
 
-list1 = [5, 3, 1, 6, 2, 10, -12]
-print(insertionSort(list1))
+"""list1 = [5, 3, 1, 6, 2, 10, -12]
+print(insertionSort(list1))"""
