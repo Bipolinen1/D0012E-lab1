@@ -1,8 +1,4 @@
 # A binary search algorithm that needs a list, a value to check, and bounds to start and end
-import random
-import time
-
-
 def binarySearch(ls, value, start, end):
     if start == end:  # If the starting value equals the end value
         if ls[start] > value:
@@ -35,9 +31,3 @@ def bSort(ls):
     return ls
 
 
-"""list = random.sample(range(-1000000, 1000000), 100000)
-
-startTime = time.time()
-print(bSort(list))
-endTime = time.time()
-print(endTime-startTime)"""

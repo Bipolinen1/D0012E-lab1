@@ -14,12 +14,15 @@ def iMergeSort(ls, k):
     while len(ls) < length:
         for i in ls:
             insertionSort(i)
-        for i in range(0, len(ls)-1, 2):
-            newList += ls[i] + ls[i + 1]
+        if len(ls) % 2 == 0:
+            for i in range(0, len(ls)-1, 2):
+                newList += ls[i] + ls[i + 1]
+        else:
+            newList += ls[len(ls) - 1]
+            for i in range(0, len(ls)-1, 2):
+                newList += ls[i] + ls[i + 1]
         ls = newList
     insertionSort(ls)
     return ls
 
 
-list1 = [3, 2, 5, 1, 6, 3, 1, 4]
-print(iMergeSort(list1, 2))
