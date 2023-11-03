@@ -7,10 +7,8 @@ def splitList(ls, chunk_size):
 
 def iMergeSort(ls, k):
     length = len(ls)
-    chunks = len(ls)//k
-    chunkSize = len(ls)//chunks
     newList = []
-    ls = splitList(ls, chunkSize)
+    ls = splitList(ls, k)
     while len(ls) < length:
         for i in ls:
             insertionSort(i)
