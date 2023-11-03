@@ -12,3 +12,4 @@ startTime = time.time()
 print(iMergeSort(list1, 2))
 endTime = time.time()
 print(endTime-startTime)
+

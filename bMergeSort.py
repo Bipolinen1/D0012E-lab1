@@ -3,8 +3,8 @@ from bSort import binarySearch
 import insertionSort
 
 
-def splitList(ls, chunkSize):
-    return [ls[i:i + chunkSize] for i in range(0, len(ls), chunkSize)]
+def splitList(ls, chunk_size):
+    return [ls[i:i + chunk_size] for i in range(0, len(ls), chunk_size)]
 
 
 def bMergeSort(ls, k):
