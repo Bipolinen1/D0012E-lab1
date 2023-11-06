@@ -3,7 +3,7 @@ from iMergeSort import *
 import time
 import random
 
-list1 = random.sample(range(1, 100001), 10000)
+list1 = random.sample(range(-100000, 1000001), 100000)
 """
 startTime = time.time()
 print(bMergeSort(list1, 2))
@@ -19,6 +19,20 @@ for i in range(2, 11):
     print(bMergeSort(list2, i))"""
 
 startTime = time.time()
-print(bSort(list1))
+print(bMergeSort(list1, 3))
 endTime = time.time()
 print(endTime-startTime)
+
+"""totalTime = 0
+bestTime = 10000
+for i in range(1, 100):
+    for j in range(10):
+        ls = random.sample(range(-1000000, 10000001), 100000)
+        startTime = time.time()
+        bMergeSort(ls, i)
+        endTime = time.time()
+        totalTime += startTime - endTime
+    print(totalTime)
+    if totalTime < bestTime:
+        bestTime = totalTime
+print(bestTime)"""
