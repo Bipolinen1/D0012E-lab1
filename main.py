@@ -1,5 +1,6 @@
 from bMergeSort import *
 from iMergeSort import *
+fromtesting iterBMergeSort import *
 import time
 import random
 
@@ -19,7 +20,7 @@ for i in range(2, 11):
     print(bMergeSort(list2, i))"""
 
 startTime = time.time()
-print(bMergeSort(list1, 50))
+print(iterBSort(list1))
 endTime = time.time()
 print(endTime-startTime)
 
