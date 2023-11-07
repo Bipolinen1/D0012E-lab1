@@ -5,4 +5,4 @@ import time
 import random
 from plot import *
 from simulateMerge import *
-plotter(simulateMerge(100, 10), 100)
+plotter(simulateMerge(100, 10), range(1, 100))
