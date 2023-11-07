@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 
 
-def plotter(time, k):
+def plotter(k, time):
     plt.plot(time, k)
-    plt.ylabel(time)
-    plt.xlabel(k)
+    plt.ylabel("Time")
+    plt.xlabel("k")
     plt.show()
