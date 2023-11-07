@@ -1,6 +1,6 @@
 from bMergeSort import *
 from iMergeSort import *
-fromtesting iterBMergeSort import *
+from iterBMergeSort import *
 import time
 import random
 
