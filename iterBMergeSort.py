@@ -2,28 +2,33 @@ from iterBSort import iterBSort
 
 
 def iterBMergeSort(ls, k):
-    middle = len(ls)//2
-    if len(ls) > k:
-        left = iterBMergeSort(ls[:middle], k)
-        right = iterBMergeSort(ls[middle:], k)
-        i = 0
-        j = 0
-        n = 0
-        while len(left) > i and len(right) > j:
-            if left[i] < right[j]:
-                ls[n] = left[i]
-                i += 1
-            else:
-                ls[n] = right[j]
-                j += 1
-            n += 1
-        while i < len(left)-1:
-            ls[n] = left[i]
-            i += 1
-            n += 1
-        while j < len(right)-1:
-            ls[n] = left[j]
-            j += 1
-            n += 1
+    if len(ls) <= k:
+        return iterBSort(ls)
+    middle = len(ls) // 2
+    ls1 = ls[:middle]
+    ls2 = ls[middle:]
+    l = iterBMergeSort(ls1, k)
+    r = iterBMergeSort(ls2, k)
+    i = 0
+    li = 0
+    ri = 0
 
-    return iterBSort(ls)
+    while li < len(l) and ri < len(r):
+        if l[li] < r[ri]:
+            ls[i] = l[li]
+            li = li + 1
+        else:
+            ls[i] = r[ri]
+            ri = ri + 1
+        i = i + 1
+
+    if li == len(l):
+        for x in range(ri, len(r)):
+            ls[i] = r[x]
+            i = i + 1
+    elif ri == len(r):
+        for x in range(li, len(l)):
+            ls[i] = l[x]
+            i = i + 1
+
+    return ls
