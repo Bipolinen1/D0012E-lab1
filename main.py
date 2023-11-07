@@ -19,7 +19,7 @@ for i in range(2, 11):
     print(bMergeSort(list2, i))"""
 
 startTime = time.time()
-print(bMergeSort(list1, 3))
+print(bMergeSort(list1, 50))
 endTime = time.time()
 print(endTime-startTime)
 
