@@ -38,5 +38,3 @@ def mergeSort(myList):
             j += 1
             k += 1
     return myList
-l = [1,2,3,67,89,65,23,45,123,456,4553,21]
-print(mergeSort(l))

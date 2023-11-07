@@ -4,5 +4,5 @@ from iterBMergeSort import *
 import time
 import random
 from plot import *
-from simulateMerge import *
-plotter(simulateMerge(100, 10), range(1, 100))
+from simulatebMerge import *
+plotter(simulatebMerge(100, 10), range(1, 100))
