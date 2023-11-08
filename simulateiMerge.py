@@ -22,4 +22,6 @@ def simulateiMerge(nr_k, runs_per_k, n):
 
         isort_times.append(avg_time)
         total_time = 0
+        best_time = min(isort_times)
+        print(f'best time: {best_time} with k = {isort_times.index(best_time) + 1}')
     return isort_times
