@@ -1,12 +1,11 @@
 import time
 import random
-from bMergeSort import *
 from iMergeSort import *
-from iterBMergeSort import *
+
 
 
 def simulateiMerge(nr_k, runs_per_k, n):
-    bsort_times = []
+    isort_times = []
     total_time = 0
     for k in range(1,nr_k):
         for j in range(runs_per_k):
@@ -21,6 +20,6 @@ def simulateiMerge(nr_k, runs_per_k, n):
         print('x:', k)
         print('y:', avg_time)
 
-        bsort_times.append(avg_time)
+        isort_times.append(avg_time)
         total_time = 0
-    return bsort_times
+    return isort_times
