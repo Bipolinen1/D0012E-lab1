@@ -23,5 +23,7 @@ def simulatebMerge(nr_k, runs_per_k, n):
 
         bsort_times.append(avg_time)
         total_time = 0
-    return bsort_times
 
+    best_time = min(bsort_times)
+    print(f'best time: {best_time} with k = {bsort_times.index(best_time)+1}')
+    return bsort_times
