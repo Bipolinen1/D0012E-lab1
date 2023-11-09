@@ -1,8 +1,6 @@
 import time
 import random
 from bMergeSort import *
-from iMergeSort import *
-from iterBMergeSort import *
 
 
 def simulatebMerge(nr_k, runs_per_k, n):

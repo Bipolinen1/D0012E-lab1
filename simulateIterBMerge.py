@@ -1,17 +1,16 @@
 import time
 import random
-from iMergeSort import *
+from iterBMergeSort import *
 
 
-
-def simulateiMerge(nr_k, runs_per_k, n):
-    isort_times = []
+def simulateIterBMerge(nr_k, runs_per_k, n):
+    iterBsort_times = []
     total_time = 0
     for k in range(1,nr_k):
         for j in range(runs_per_k):
             data = random.sample(range(1, n+1), n)
             start_time = time.time()
-            iMergeSort(data, k)
+            iterBMergeSort(data, k)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
@@ -20,8 +19,9 @@ def simulateiMerge(nr_k, runs_per_k, n):
         print('x:', k)
         print('y:', avg_time)
 
-        isort_times.append(avg_time)
+        iterBsort_times.append(avg_time)
         total_time = 0
-    best_time = min(isort_times)
-    print(f'best time: {best_time} with k = {isort_times.index(best_time) + 1}')
-    return isort_times
+
+    best_time = min(iterBsort_times)
+    print(f'best time: {best_time} with k = {iterBsort_times.index(best_time)+1}')
+    return iterBsort_times
