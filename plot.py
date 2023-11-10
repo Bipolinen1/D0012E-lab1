@@ -9,8 +9,11 @@ def plotter(k, time, name):
     plt.legend()
     plt.savefig(save)
 
-def nPlotter(n_list,time):
-    plt.plot(time, n_list)
+
+def nPlotter(n_list,time, name):
+    save = name + ".pdf"
+    plt.plot(time, n_list, label=name)
     plt.ylabel("Time")
     plt.xlabel("n")
-    plt.show()
+    plt.legend()
+    plt.savefig(save)
