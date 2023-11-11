@@ -5,13 +5,13 @@ def hbMergeSort(ls, k):
     if len(ls) <= k:
         return bSort(ls)
     if len(ls) % k != 0:
-        temp = len(ls) - (len(ls) % k)
-        if temp % 2 == 0:
+        temp = len(ls) - (len(ls) // k)
+        if temp % 2 == 0 and k % 2 != 0:
             split = temp // 2
         else:
             split = (temp + k) // 2
     else:
-        if len(ls) % 2 == 0:
+        if len(ls) % 2 == 0 and k % 2 != 0:
             split = len(ls) // 2
         else:
             split = (len(ls) + k) // 2

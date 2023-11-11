@@ -22,8 +22,8 @@ nPlotter(simulateIncreasingNIterBMerge(), range(10000, 1010000, 100000), "iterBM
 nPlotter(simulateIncreasingNIMerge(), range(10000, 1010000, 100000), "iMerge")
 nPlotter(simulateIncreasingNNormalMerge(), range(10000, 1010000, 100000), "nMerge")"""
 
-ls = random.sample(range(1, 100001), 100000)
+ls = random.sample(range(1, 21), 20)
 start = time.time()
-print(hbMergeSort(ls, 3))
+print(hbMergeSort(ls, 4))
 end = time.time()
 print(end - start)
