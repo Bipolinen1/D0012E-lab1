@@ -1,14 +1,16 @@
 from insertionSort import insertionSort
+import math
 
-
-def iMergeSort(ls, k):
+def iMergeSort(ls,k):
+    n = len(ls) // k
     if len(ls) <= k:
         return insertionSort(ls)
-    middle = len(ls) // 2
-    ls1 = ls[:middle]
-    ls2 = ls[middle:]
-    l = iMergeSort(ls1, k)
-    r = iMergeSort(ls2, k)
+
+    k_mid = math.ceil(n/2)
+
+    r = iMergeSort(ls[k * k_mid:], k)
+    l = iMergeSort(ls[:k*k_mid], k)
+
     i = 0
     li = 0
     ri = 0
@@ -30,6 +32,6 @@ def iMergeSort(ls, k):
         for x in range(li, len(l)):
             ls[i] = l[x]
             i = i + 1
-
     return ls
+
 

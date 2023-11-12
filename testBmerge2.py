@@ -1,6 +1,7 @@
-from bSort import bSort
+from bSort import *
 import math
-
+from simulatebMerge import *
+from testBmerge import *
 def bMergeSort(ls,k):
     n = len(ls) // k
     if len(ls) <= k:
@@ -33,7 +34,4 @@ def bMergeSort(ls,k):
             ls[i] = l[x]
             i = i + 1
     return ls
-
-
-
 
