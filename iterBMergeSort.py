@@ -1,15 +1,15 @@
 from iterBSort import iterBSort
 import math
 
-def iterBMergeSort(ls,k):
+def iterbMergeSort(ls,k):
     n = len(ls) // k
     if len(ls) <= k:
         return iterBSort(ls)
 
     k_mid = math.ceil(n/2)
 
-    r = iterBMergeSort(ls[k * k_mid:], k)
-    l = iterBMergeSort(ls[:k*k_mid], k)
+    r = iterbMergeSort(ls[k * k_mid:], k)
+    l = iterbMergeSort(ls[:k*k_mid], k)
 
     i = 0
     li = 0

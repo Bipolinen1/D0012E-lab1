@@ -2,15 +2,15 @@ from bSort import *
 import math
 from simulatebMerge import *
 from testBmerge import *
-def bMergeSort(ls,k):
+def WWbMergeSort(ls, k):
     n = len(ls) // k
     if len(ls) <= k:
         return bSort(ls)
 
     k_mid = math.ceil(n/2)
 
-    r = bMergeSort(ls[k * k_mid:], k)
-    l = bMergeSort(ls[:k*k_mid], k)
+    r = WWbMergeSort(ls[k * k_mid:], k)
+    l = WWbMergeSort(ls[:k * k_mid], k)
 
     i = 0
     li = 0

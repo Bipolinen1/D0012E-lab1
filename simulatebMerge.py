@@ -10,7 +10,7 @@ def simulatebMerge(nr_k, runs_per_k, n):
         for j in range(runs_per_k):
             data = random.sample(range(1, n+1), n)
             start_time = time.time()
-            bMergeSort(data, k)
+            WWbMergeSort(data, k)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
