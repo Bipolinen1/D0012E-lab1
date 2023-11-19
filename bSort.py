@@ -11,7 +11,7 @@ def binarySearch(ls, value, start, end):
 
     middle = (start + end) // 2  # Calculate the middle position as the average of start and end
 
-    if value < ls[middle]:  # If the value is less than the value in the middle position
+    if value < ls[middle]:   # If the value is less than the value in the middle position
         # Runs binary search again, but changes end to middle - 1, checking the next element
         return binarySearch(ls, value, start, middle - 1)
     elif value > ls[middle]:  # If value is larger than the middle value
