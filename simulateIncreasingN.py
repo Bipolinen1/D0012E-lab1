@@ -2,7 +2,6 @@ from bMergeSort import *
 from iMergeSort import *
 from normalMerge import *
 from iterBMergeSort import iterBMergeSort
-from bSort import *
 from iterBSort import *
 from insertionSort import *
 import random
@@ -17,7 +16,7 @@ def simulateIncreasingNBMerge():
         for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
-            bMergeSort(data, 86 * counter)
+            bMergeSort(data, 25 * counter)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
@@ -37,14 +36,14 @@ def simulateIncreasingNIterBMerge():
     total_time = 0
     counter = 1
     for k in range(100000, 1100000, 100000):
-        for j in range(100):
+        for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
-            iterBMergeSort(data, 102 * counter)
+            iterBMergeSort(data, 192 * counter)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/100
+        avg_time = total_time/10
         counter += 1
         print('x:', k)
         print('y:', avg_time)
@@ -58,18 +57,15 @@ def simulateIncreasingNIterBMerge():
 def simulateIncreasingNIMerge():
     times = []
     total_time = 0
-    counter = 1
     for k in range(100000, 1100000, 100000):
-        for j in range(100):
+        for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
-            iMergeSort(data, 21 * counter)
+            iMergeSort(data, 12)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/100
-        counter += 1
-
+        avg_time = total_time/10
         print('x:', k)
         print('y:', avg_time)
 
@@ -83,10 +79,32 @@ def simulateIncreasingNNormalMerge():
     times = []
     total_time = 0
     for k in range(100000, 1100000, 100000):
-        for j in range(100):
+        for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
             mergeSort(data)
+            end_time = time.time()
+            delta_time = end_time - start_time
+            total_time = total_time + delta_time
+        avg_time = total_time/10
+
+        print('x:', k)
+        print('y:', avg_time)
+
+        times.append(avg_time)
+        total_time = 0
+
+    return times
+
+
+def simulateIncreasingNBSort():
+    times = []
+    total_time = 0
+    for k in range(10000, 200001, 10000):
+        for j in range(5):
+            data = random.sample(range(1, k+1), k)
+            start_time = time.time()
+            bSort(data)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
@@ -101,40 +119,18 @@ def simulateIncreasingNNormalMerge():
     return times
 
 
-def simulateIncreasingNBSort():
-    times = []
-    total_time = 0
-    for k in range(10000, 110001, 10000):
-        for j in range(10):
-            data = random.sample(range(1, k+1), k)
-            start_time = time.time()
-            bSort(data)
-            end_time = time.time()
-            delta_time = end_time - start_time
-            total_time = total_time + delta_time
-        avg_time = total_time/10
-
-        print('x:', k)
-        print('y:', avg_time)
-
-        times.append(avg_time)
-        total_time = 0
-
-    return times
-
-
 def simulateIncreasingNIterBSort():
     times = []
     total_time = 0
-    for k in range(10000, 110001, 10000):
-        for j in range(10):
+    for k in range(10000, 200001, 10000):
+        for j in range(5):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
             iterBSort(data)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/10
+        avg_time = total_time/100
 
         print('x:', k)
         print('y:', avg_time)
@@ -145,7 +141,7 @@ def simulateIncreasingNIterBSort():
     return times
 
 
-def simulateIncreasingNInsertionSort():
+def simulateIncreasingNISort():
     times = []
     total_time = 0
     for k in range(10000, 50001, 10000):
@@ -156,7 +152,7 @@ def simulateIncreasingNInsertionSort():
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/5
+        avg_time = total_time/100
 
         print('x:', k)
         print('y:', avg_time)
