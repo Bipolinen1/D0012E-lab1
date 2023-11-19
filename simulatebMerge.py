@@ -1,7 +1,6 @@
 import time
 import random
 from bMergeSort import *
-from testBmerge2 import *
 
 def simulatebMerge(nr_k, runs_per_k, n):
     bsort_times = []
