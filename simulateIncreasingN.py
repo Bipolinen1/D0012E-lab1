@@ -12,11 +12,11 @@ def simulateIncreasingNBMerge():
     times = []
     total_time = 0
     counter = 1
-    for k in range(100000, 1100000, 100000):
+    for k in range(10000, 200001, 10000):
         for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
-            bMergeSort(data, 25 * counter)
+            bMergeSort(data, 68)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
@@ -39,7 +39,7 @@ def simulateIncreasingNIterBMerge():
         for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
-            iterBMergeSort(data, 192 * counter)
+            iterBMergeSort(data, 115)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
@@ -61,7 +61,7 @@ def simulateIncreasingNIMerge():
         for j in range(10):
             data = random.sample(range(1, k+1), k)
             start_time = time.time()
-            iMergeSort(data, 12)
+            iMergeSort(data, 14)
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
@@ -108,7 +108,7 @@ def simulateIncreasingNBSort():
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/100
+        avg_time = total_time/5
 
         print('x:', k)
         print('y:', avg_time)
@@ -130,7 +130,7 @@ def simulateIncreasingNIterBSort():
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/100
+        avg_time = total_time/5
 
         print('x:', k)
         print('y:', avg_time)
@@ -152,7 +152,7 @@ def simulateIncreasingNISort():
             end_time = time.time()
             delta_time = end_time - start_time
             total_time = total_time + delta_time
-        avg_time = total_time/100
+        avg_time = total_time/5
 
         print('x:', k)
         print('y:', avg_time)
